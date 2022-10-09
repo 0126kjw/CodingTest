@@ -9,8 +9,12 @@
 # 3 ≤ n ≤ 1,000,000
 
 def solution(n):
-    answer = []
-    return answer
+    count = 0
+    while True:
+        count = count + 1
+        if n % count == 1:
+            break
+    return count
 
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
