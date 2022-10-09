@@ -8,7 +8,10 @@
 # n은 1이상 8000000000 이하인 자연수입니다.
 
 def solution(n):
-    answer = 0
-    return answer
+    answer = list(str(n))
+    answer.sort(reverse = True)
+    return int(''.join(answer))
+
+print(solution(118372))  # 873211
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
