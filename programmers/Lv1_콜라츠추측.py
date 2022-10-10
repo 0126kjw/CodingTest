@@ -12,10 +12,27 @@
 # 제한 사항
 # 입력된 수, num은 1 이상 8,000,000 미만인 정수입니다.
 
-def solution(n):
-    answer = 0
-    return answer
+def solution(num):
+    count = 0
+    while True:
+        if num == 1:
+            break
+        else:
+            if num % 2 == 0:
+                num = num / 2
+                count = count + 1
+            else:
+                num = num * 3 + 1
+                count = count + 1
 
-print(solution())
+            if count >= 500:
+                count = -1
+                break
+    return count
+
+print(solution(6))  # 8
+print(solution(8))  # 3
+print(solution(626331))  # -1
+print(solution(1))  # 0
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
