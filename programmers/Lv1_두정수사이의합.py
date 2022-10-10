@@ -9,10 +9,18 @@
 # a와 b는 -10,000,000 이상 10,000,000 이하인 정수입니다.
 # a와 b의 대소관계는 정해져있지 않습니다.
 
-def solution(n):
-    answer = 0
-    return answer
+def solution(a, b):
+    min, max = 0, 0
+    if a > b:
+        max = a
+        min = b
+    else:
+        max = b
+        min = a
+    return sum(range(min, max+1))
 
-print(solution())
+print(solution(3, 5))  # 12
+print(solution(3, 3))  # 3
+print(solution(5, 3))  # 12
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
