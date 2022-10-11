@@ -8,8 +8,10 @@
 # seoul의 원소는 길이 1 이상, 20 이하인 문자열입니다.
 # "Kim"은 반드시 seoul 안에 포함되어 있습니다.
 
-def solution(n):
-    answer = []
-    return answer
+def solution(seoul):
+    answer = seoul.index("Kim")
+    return f"김서방은 {answer}에 있다"
+
+print(solution(['Jane','Kim']))  # "김서방은 1에 있다"
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
