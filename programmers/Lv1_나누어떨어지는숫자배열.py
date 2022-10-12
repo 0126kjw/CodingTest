@@ -10,9 +10,18 @@
 # divisor는 자연수입니다.
 # array는 길이 1 이상인 배열입니다.
 
-def solution():
+def solution(arr, divisor):
     answer = []
+    for i in arr:
+        if i % divisor == 0:
+            answer.append(i)
+    answer.sort()
+    if len(answer) == 0:
+        answer.append(-1)
     return answer
 
+print(solution([5, 9, 7, 10], 5))  # [5, 10]
+print(solution([2, 36, 1, 3], 1))  # [1, 2, 3, 36]
+print(solution([3, 2, 6], 10))  # [-1]
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
