@@ -8,7 +8,13 @@
 # 인덱스 i, j에 대해 i ≠ j이면 arr[i] ≠ arr[j] 입니다.
 
 def solution(arr):
-    answer = []
-    return answer
+    if len(arr) > 1:
+        arr.remove(min(arr))
+        return arr
+    else:
+        return [-1]
+
+print(solution([4, 3, 2, 1]))  # [4, 3, 2]
+print(solution([10]))  # [-1]
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
