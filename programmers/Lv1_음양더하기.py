@@ -10,7 +10,17 @@
     # signs[i] 가 참이면 absolutes[i] 의 실제 정수가 양수임을, 그렇지 않으면 음수임을 의미합니다.
 
 def solution(absolutes, signs):
-    answer = 123456789
+    answer = 0
+    count = 0
+    for i in signs:
+        if i == True:
+            answer = answer + absolutes[count]
+        else:
+            answer = answer - absolutes[count]
+        count = count + 1
     return answer
+
+print(solution([4,7,12], [True,False,True]))  # 9
+print(solution([1,2,3], [False,False,True]))  # 0
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
