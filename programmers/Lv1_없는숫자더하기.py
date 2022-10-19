@@ -9,7 +9,13 @@
 # numbers의 모든 원소는 서로 다릅니다.
 
 def solution(numbers):
-    answer = -1
+    answer = 0
+    for i in range(1, 10):
+        if i not in numbers:
+            answer = answer + i
     return answer
+
+print(solution([1,2,3,4,6,7,8,0]))  # 14
+print(solution([5,8,4,0,6,7,9]))  # 6
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
