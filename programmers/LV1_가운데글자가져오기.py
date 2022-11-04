@@ -7,8 +7,12 @@
 # s는 길이가 1 이상, 100이하인 스트링입니다.
 
 def solution(s):
-    answer = ''
-    return answer
+    if len(s) % 2 == 0:
+        return s[len(s)//2-1 : len(s)//2+1]
+    else:
+        return s[len(s)//2]
 
+print(solution('abcde'))  # 'c'
+print(solution('qwer'))  # 'we'
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
