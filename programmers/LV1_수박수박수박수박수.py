@@ -6,9 +6,18 @@
 # 제한 조건
 # n은 길이 10,000이하인 자연수입니다.
 
-def solution(seoul):
+def solution(n):
+    text = ['수','박']
     answer = []
-    return answer
+    for i in range(n):
+        if i % 2 == 0:
+            answer.append(text[0])
+        else:
+            answer.append(text[1])
+    return ''.join(answer)
+
+print(solution(3))  # '수박수'
+print(solution(4))  # '수박수박'
 
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
