@@ -8,9 +8,14 @@
 # a, b의 길이는 1 이상 1,000 이하입니다.
 # a, b의 모든 수는 -1,000 이상 1,000 이하입니다.
 
-def solution(n):
+def solution(a, b):
     answer = 0
+    for i in range(0,len(a)):
+        answer += a[i]*b[i]
     return answer
+
+print(solution([1,2,3,4], [-3,-1,0,2]))  # 3
+print(solution([-1,0,1], [1,0,-1]))  # -2
 
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
