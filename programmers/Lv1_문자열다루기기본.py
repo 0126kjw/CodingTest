@@ -8,9 +8,12 @@
 # s는 영문 알파벳 대소문자 또는 0부터 9까지 숫자로 이루어져 있습니다.
 
 def solution(s):
-    answer = 0
-    return answer
+    if (len(s) == 4 or len(s) == 6) and s.isdigit():
+        return True
+    else:
+        return False
 
-
+print(solution("a234"))  # false
+print(solution("1234"))  # true
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
