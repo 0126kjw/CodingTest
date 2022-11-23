@@ -7,9 +7,12 @@
 # 제한 조건
 # s에는 둘 이상의 정수가 공백으로 구분되어 있습니다.
 
-def solution(x, n):
-    answer = 0
-    return answer
+def solution(s):
+    s = list(map(int,s.split()))
+    return str(min(s)) + " " + str(max(s))
 
+print(solution('1 2 3 4'))  # '1 4'
+print(solution('-1 -2 -3 -4'))  # '-4 -1'
+print(solution('-1 -1'))  # '-1 -1'
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
