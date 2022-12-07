@@ -12,7 +12,16 @@
 # 공백문자가 연속해서 나올 수 있습니다.
 
 def solution(s):
-    answer = ''
-    return answer
-    
+    a = s.split(' ')
+    answer = []
+    for i in a:
+        if i.isdigit() == False:
+            answer.append(i.capitalize())
+        else:
+            answer.append(i)
+    return ' '.join(answer)
+
+print(solution("3people unFollowed me"))  # "3people Unfollowed Me"
+print(solution(("for the last week")))  # "For The Last Week"
+
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
