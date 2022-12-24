@@ -17,10 +17,15 @@
 
 def solution(A,B):
     answer = 0
-
-    # [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    print('Hello Python')
-
+    A.sort()
+    B.sort(reverse=True)
+    
+    for i in range(len(A)):
+        answer += A[i]*B[i]
+        
     return answer
+
+print(solution([1, 4, 2], [5, 4, 4]))  # 29
+print(solution([1,2], [3,4]))  # 10
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
