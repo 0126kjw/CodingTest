@@ -11,11 +11,15 @@
 # 문자열은 모두 소문자로 이루어져 있습니다.
 
 def solution(s):
-    answer = -1
+    stack = []
+    for i in s:
+        if len(stack) == 0: stack.append(i)
+        elif stack[-1] == i: stack.pop()
+        else: stack.append(i)
+    if len(stack) == 0: return 1
+    else: return 0 
 
-    # [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    print('Hello Python')
-
-    return answer
+print(solution('baabaa'))  # 1
+print(solution('cdcd'))  # 0
 
 # 위 문제의 저작권은 2022 프로그래머스 (주)그렙 에 있습니다.
