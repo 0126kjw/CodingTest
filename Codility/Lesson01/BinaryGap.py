@@ -35,5 +35,8 @@ def solution(N):
 
     return max_num
 
+# 결과
+# https://app.codility.com/demo/results/trainingV8YDZC-QSU/
+
 
 # Copyright 2009–2023 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
