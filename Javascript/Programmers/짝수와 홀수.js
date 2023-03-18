@@ -14,4 +14,6 @@ function solution(num) {
     }
 }
 
+console.log(solution(10)); // Even
+
 // 위 문제의 저작권은 2023 프로그래머스 (주)그렙 에 있습니다.
